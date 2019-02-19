@@ -1,6 +1,6 @@
 library(data.table)
 library(dplyr)
-library(hms)
+library(lubridate)
 data <- fread(file = "household_power_consumption.txt", sep = ";", 
               skip = c("1/2/2007"), nrows = 2880, na.strings = "?", data.table = TRUE)
 colnames(data) <- names(fread("household_power_consumption.txt", sep = ";", nrows = 1))
